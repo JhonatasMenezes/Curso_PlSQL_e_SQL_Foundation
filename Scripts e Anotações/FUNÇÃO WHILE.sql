@@ -1,0 +1,11 @@
+DECLARE 
+ N_COUNTER NUMBER:=0;
+ 
+BEGIN
+ WHILE N_COUNTER <= 5
+    LOOP
+      DBMS_OUTPUT.put_line('Counter : '|| N_COUNTER);
+      N_COUNTER := N_COUNTER + 1;
+    END LOOP;
+ END;
+ 

@@ -1,0 +1,17 @@
+CONSTRAINT DE CHECAGEM - CHECK
+Define uma checagem de dados no momento da 
+inserção de dados. Ex: definir uma checagem de valor
+no momento do INSERT para permitir inserir apenas
+o valor entre 0 e 10 em uma coluna.
+
+Data type
+
+number (8) #números inteiro  (8,2) #números decimais
+date   #para datas, pega a data direto do OS
+ 
+varchar2   #não aloca espaço de momória
+
+varchar    #ja alocam a qunatidade 
+char	   #definia do tipo de dados
+
+         

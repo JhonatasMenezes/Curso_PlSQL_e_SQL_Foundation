@@ -1,0 +1,49 @@
+-- paralelismo (uso de núcleos)
+select degree
+from user_tables
+where table_name='departments';
+
+desc degree from user_tables;
+
+select degree from user_tables;
+
+select * from employees;
+
+alter table employees parallel (degree 2);
+-- só funciona na versão enterprise
+-- ajudamuito no processamento quando se trabalha com alto volume de dados
+
+
+-- ------------------------------------------------------- --
+-- TABLESPACE
+-- SYSTEM  -  GERENCIAMENTO DO DB
+-- SYSAUX  -  AUXILIAR A SYSTEM NO GERENCIAMENTO (ENTERPRISE)
+-- UNDO    -  TRANSAÇÇOES DESFEITAS
+-- USERS   -  USUÁRIOS NOVOS SEM ESPECIFICAÇÃO DE TABLESPACE
+-- TEMP    -  DESTINO DE OBJETOS TEMPORÁRIOS
+
+SELECT * FROM DBA_TABLESPACES;
+
+SELECT * FROM DBA_TABLESPACES;
+
+-- TABLESPACE PERMANENTE
+
+CREATE TABLESPACE TBS_DADOS 
+DATAFILE 'C:\YOURPC\YOURDIRECTORY';
+
+CREATE TABLE TB_AULA_06 (COD NUMBER)
+TABLESPACE TBS_DADOS;
+
+-- TABLESPACE TEMPORARIA
+
+CREATE TEMPORARY TABLESPACE TB_TEMP
+TEMPFILE 'C:\YOURPC\YOURDIRECTORY'SIZE 10M;
+
+-- TABLESPACE UNDO
+CREATE UNDO TABLESPACE TBS_UNDO
+DATAFILE 'C:\YOURPC\YOURDIRECTORY'SIZE 10M;
+
+-- ADICIONAR DATAFILE PRA AUMENTAR TAMANHO DA TABLESPACE
+ALTER TABLESPACE TBS_DADOS ADD DATAFILE
+'C:\YOURPC\YOURDIRECTORY'SIZE 10M;
+
